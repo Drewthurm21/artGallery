@@ -15,10 +15,10 @@ class Post(db.Model):
 
     def to_dict(self):
         return {   
-        "id": self.id,
-        "title": self.title,
-        "body": self.body,
-        "photo_url": self.photo_url,
-        "created_at": self.created_at,
-        "updated_at": self.updated_at,
+            "id": self.id,
+            "title": self.title,
+            "body": self.body,
+            "photo_url": self.photo_url,
+            "created_at": self.created_at,
+            "updated_at": self.updated_at,
         }   
