@@ -32,10 +32,10 @@ pycodestyle = "*"
 pylint = "*"
 rope = "*"
 psycopg2-binary = "*"
-flask-db = "*"
 boto3 = "*"
 botocore = "*"
-faker = "*"
+Flask-DB = "*"
+Faker = "*"
 
 [dev-packages]
 psycopg2-binary = "==2.8.6"

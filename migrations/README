@@ -1,1 +1,5 @@
 Generic single-database configuration.
+
+USING FLASK-DB: COMMANDS BELOW
+1. flask db reset
+2. flask seed all
