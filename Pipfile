@@ -35,6 +35,7 @@ psycopg2-binary = "*"
 flask-db = "*"
 boto3 = "*"
 botocore = "*"
+faker = "*"
 
 [dev-packages]
 psycopg2-binary = "==2.8.6"
