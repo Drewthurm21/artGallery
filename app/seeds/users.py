@@ -6,7 +6,7 @@ from app.models import db, User
 def seed_users():
 
     demo = User(username='Jessa', email='artGal1@gmail.com',
-                password='password')
+                password='placeholder')
 
     db.session.add(demo)
 
