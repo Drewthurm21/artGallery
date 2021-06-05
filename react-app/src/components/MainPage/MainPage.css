@@ -27,11 +27,11 @@
     justify-content: center;
     align-items: flex-start;
     margin: 20px 0px 0px 0px;
-    opacity: .6;
+    opacity: .95;
 }
 
 .main-banner-image {
-   height: 200px;
+   height: 150px;
 }
 
 /* MODAL LINKS */
@@ -45,17 +45,21 @@
 .main-link {
     display: flex;
     justify-content: center;
-    height: 25px;
-    width: 50px;
+    height: 20px;
+    width: 70px;
 
-    padding: 10px;
-    margin: 10px 10px 30px 10px;
-    border: 5px solid grey;
-    font-family: 'Nunito Sans', sans-serif;
-    color: var(--CHARCOAL);
-    font-weight: bold;
+    border: 2px solid grey;
+    border-radius: 3px;
     background-color: var(--TAN_BACKGROUND);
     box-shadow: 1px 1px 25px 2px var(--GREY_TEXT);
+    margin: 10px 10px 30px 10px;
+    padding: 10px;
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    color: var(--CHARCOAL);
+
+    cursor: pointer;
 }
 
 /* FOOTER */
@@ -63,6 +67,7 @@
     grid-area: foot;
     display: flex;
     justify-content: center;
+    align-items: center;
     opacity: .5;
 }
 

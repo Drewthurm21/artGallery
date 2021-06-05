@@ -2,10 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap');
 
 :root {
-    --GREEN_HIGHLIGHT: #e5f9e6;
-    --GREEN_TEXT: #40c802;
-    --RED_TEXT: #f65004;
-    --DARK_RED: #b53a14;
+
     --PINK: #ceb1a6;
     --WHITE: #ffffff;
     --BOX_SHADOW: #e8e8eb;
@@ -14,13 +11,24 @@
     --GREY_TEXT: #a2a2a2;
     --CHARCOAL: #222b37;
     --BLACK: black;
+    --RUST: #8A584C;
+    --TEAL: #8FA6AC;
+    --LIGHT_TAN: #F5EACF;
+    --DARK_TAN: #CEB793;
+    --FOREST_GREEN: #85865F;
+    --DARK_GREEN: #4F583D;
 
 }
 
 body {
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
-    /* background-color: var(--GREY_SHADOW); */
     color: var(--CHARCOAL);
     margin: 0;
+}
+
+.flex-center { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
