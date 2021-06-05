@@ -72,8 +72,6 @@ const MainPage = () => {
 
     return (
         <div className='main-container'>
-            <img src='https://github.com/Drewthurm21/artGallery/blob/main/images/mushroom.JPG?raw=true' className='main-background-image'>
-            </img>
 
             { displayContent}
             <div className='main-links-container'>
