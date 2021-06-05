@@ -6,7 +6,7 @@ from sqlalchemy import desc
 comment_routes = Blueprint('comments', __name__)
 
 
-@comment_routes.route('/')
+@comment_routes.route('')
 def get_comments():
     '''
     return all comments
