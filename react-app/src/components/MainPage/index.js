@@ -14,10 +14,10 @@ const MainPage = () => {
     const [openGallery, setOpenGallery] = useState(false)
     const [openBlog, setOpenBlog] = useState(false)
     const [openContact, setOpenContact] = useState(false)
-    
+
     // ----- MODAL ONCLICK FUNCTIONS ----- //
     const showGallery = () => {
-        if(openGallery) {
+        if (openGallery) {
             setOpenGallery(false)
         } else {
             setOpenBlog(false)
@@ -45,17 +45,17 @@ const MainPage = () => {
             setOpenContact(true)
         }
     }
-    
+
     // ----- BASIC DISPLAY LOGIC || REPLACE WITH MODAL LATER ----- //
     let displayContent, component;
-    if(openGallery || openBlog || openContact){
+    if (openGallery || openBlog || openContact) {
         if (openGallery) component = <GalleryModal />
         if (openBlog) component = <BlogModal />
         if (openContact) component = <ContactModal />
 
         displayContent = (
             <div className='main-banner-container'>
-                { component }
+                { component}
             </div>
         )
     } else (
@@ -68,11 +68,14 @@ const MainPage = () => {
         )
     )
     // ------------------------------------------------------------- //
-    
+
 
     return (
         <div className='main-container'>
-            { displayContent }
+            <img src='https://github.com/Drewthurm21/artGallery/blob/main/images/mushroom.JPG?raw=true' className='main-background-image'>
+            </img>
+
+            { displayContent}
             <div className='main-links-container'>
                 <div onClick={showGallery} className='main-link'>Gallery</div>
                 <div onClick={showBlog} className='main-link'>Blog</div>

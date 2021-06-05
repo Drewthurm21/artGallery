@@ -2,8 +2,7 @@
 
 
 .main-container {
-    background-image: linear-gradient(to right, rgba(206, 177, 166, 0.4), rgba(192, 178, 169, 0.9)),
-                  url("../../frontend-assets/smallbird.JPG");
+    background-image: url("../../frontend-assets/flower.JPG");
     background-color: var(--TAN_BACKGROUND) ;
     background-repeat: no-repeat;
     background-size: 100vw;
@@ -12,12 +11,12 @@
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns:  1fr 3fr 1fr ;
     grid-template-rows: 1fr 2fr 40px;
     grid-template-areas:
-        ' . banner . '
-        ' . links . '
-        ' . foot . ';
+        '  . banner .  '
+        '  . links . '
+        '  . foot . ';
 }
 
 /* BANNER IMAGE */
