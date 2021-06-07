@@ -6,7 +6,6 @@ const loadComments = (comments) => ({
   payload: comments
 })
 
-
 export const getComments = () => async (dispatch) => {
   let res = await fetch('/api/comments', {
     headers: {
@@ -24,14 +23,11 @@ export const deleteComment = (id) => async (dispatch) => {
   let res = await fetch(`/api/comments/${id}`, { method: 'DELETE' })
 
   if (res.ok) {
-    return "Successful"
+    return 'yoink'
   }
 }
 
-
-const initialState = {
-  'comments': null
-}
+const initialState = { comments: null }
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
