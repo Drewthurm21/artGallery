@@ -15,16 +15,6 @@ const MainPage = () => {
     const [openBlog, setOpenBlog] = useState(false)
     const [openContact, setOpenContact] = useState(false)
 
-    // ----- PARALLAX SCROLL ----- //
-    const [scrollOffset, setScrollOffset] = useState(0)
-    const handleScroll = () => setScrollOffset(window.pageYOffset)
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
-
     // ----- MODAL ONCLICK FUNCTIONS ----- //
     const showGallery = () => {
         if (openGallery) {

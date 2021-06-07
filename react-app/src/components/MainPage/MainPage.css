@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap');
 
+@media only screen and (max-width:500px) {
+    .main-container { 
+        background-size: cover;
+    } 
+}
 
 .main-container {
     background-image: url("../../frontend-assets/mushrooms.JPG");
     background-color: var(--TAN_BACKGROUND) ;
     background-repeat: no-repeat;
-    background-size: 100vw;
-    background-position: 50% 20%;
+    background-size:    cover;
+    background-position: center center;
     color: var(--WHITE);
     height: 100vh;
     width: 100vw;
@@ -44,7 +49,6 @@
 .main-link {
     display: flex;
     justify-content: center;
-    height: 20px;
     width: 70px;
 
     border: 2px solid grey;

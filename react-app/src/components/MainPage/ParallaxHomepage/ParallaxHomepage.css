@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -15,42 +19,68 @@ body {
 
 .parallax-background,
 .parallax-background-triangles {
-  width: 1080px;
-  height: 1280px;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
 }
 
-.parallax-background { background-image: url("./images/background.png");}
+.parallax-background { 
+  background-image: url("./images/background.png");
+  width: 90vw;
+  height: 100vw;
+}
 
-.parallax-background-triangles { background-image: url("./images/background-triangles.png");}
+.parallax-background-triangles { 
+  background-image: url("./images/background-triangles.png");
+  margin-top: 10vw;
+  z-index:2;
+  width: 79vw;
+  height: 79vw;
+}
 
 .parallax-content {
   width: 1080px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1;
-  margin-top: 90vw;
+  z-index: 3;
+  margin-top: 65%;
 }
-.parallax-content-heading,
+
 .parallax-content-container {
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.parallax-content-container div {
+  padding: 5px;
+  margin-left: 2px; 
+  margin-right: px; 
+  width: 100%;
+  border: 2px solid white;
 }
 
 .parallax-content-heading {
-  background-color: #fff;
+  background-color:#fa8887;
   width: 40%;
   padding: 40px;
   margin-top: 100px;
 }
 
-.parallax-content-heading-text {
-  margin: 10px 0;
+.parallax-content-heading-fname {
+  position: absolute;
+  margin-top: 99vw;
   font-size: 60px;
+  z-index: 1;
+}
+
+.parallax-content-heading-lname {
+  position: absolute;
+  margin-top: 107vw;
+  font-size: 60px;
+  z-index: 1;
 }
 
 .parallax-content-heading-caption {
@@ -64,6 +94,6 @@ body {
   padding: 40px;
   font-size: 20px;
   color: #fff;
-  margin-top: 15vw;
+  margin-top: 7vw;
 }
   
