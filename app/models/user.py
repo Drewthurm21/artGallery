@@ -12,6 +12,26 @@ class User(db.Model, UserMixin):
 
 
     @property
+    def username(self):
+        return self.username
+
+
+    @username.setter
+    def username(self, username):
+        self.username = username
+
+
+    @property
+    def email(self):
+        return self.email
+
+
+    @email.setter
+    def email(self, email):
+        self.email = email
+
+
+    @property
     def password(self):
         return self.hashed_password
 
