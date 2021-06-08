@@ -9,6 +9,7 @@ import ParallaxHomepage from "./components/MainPage/ParallaxHomepage"
 // import { authenticate } from "./services/auth";
 import { authenticate } from "./store/session";
 import MainPage from './components/MainPage'
+import Modal from "./components/MainPage/Modals/Modal";
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Modal />
       <Switch>
         <Route path="/" exact={true}>
           <MainPage />

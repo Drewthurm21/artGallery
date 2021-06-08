@@ -45,4 +45,3 @@ def delete_post(id):
     db.session.commit()
 
     return { 'removed': post.to_dict() }
-
