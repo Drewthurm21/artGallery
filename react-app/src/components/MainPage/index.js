@@ -20,39 +20,20 @@ const MainPage = () => {
 
     // ----- MODAL ONCLICK FUNCTIONS ----- //
     const showGallery = () => {
-        if (openGallery) {
-            setOpenGallery(false)
-        } else {
-            setOpenBlog(false)
-            setOpenContact(false)
-            setOpenGallery(true)
-        }
+        dispatch(setCurrentModal(GalleryModal))
+        dispatch(showModal())
     }
 
     const showBlog = () => {
-        if (openBlog) {
-            setOpenBlog(false)
-        } else {
-            setOpenGallery(false)
-            setOpenContact(false)
-            setOpenBlog(true)
-        }
+        dispatch(setCurrentModal(BlogModal))
+        dispatch(showModal())
     }
 
     const showContact = () => {
-        if (openContact) {
-            setOpenContact(false)
-        } else {
-            setOpenGallery(false)
-            setOpenBlog(false)
-            setOpenContact(true)
-        }
-    }
-
-    const callModal = () => {
         dispatch(setCurrentModal(ContactModal))
         dispatch(showModal())
     }
+
 
     // ----- BASIC DISPLAY LOGIC || REPLACE WITH MODAL LATER ----- //
     let displayContent, component;
@@ -85,7 +66,7 @@ const MainPage = () => {
             <div className='main-links-container'>
                 <div onClick={showGallery} className='main-link'>Gallery</div>
                 <div onClick={showBlog} className='main-link'>Blog</div>
-                <div onClick={callModal} className='main-link'>Contact</div>
+                <div onClick={showContact} className='main-link'>Contact</div>
             </div>
             <div className='main-foot-container'>
                 © Jessa Lopez | Developed by CoolKidsCoop
