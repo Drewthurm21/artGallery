@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { postComment } from '../../../store/comments'
 import './ContactModal.css';
 
 const ContactModal = () => {
@@ -28,14 +29,11 @@ const ContactModal = () => {
         setContent('')
     }
 
-    const postComment = (e, name, email, content) => async (dispatch) => {
-        e.preventDefault()
-        if (errors.length !== 0) return
-        const formData = new FormData()
-        formData.append('name', name)
-        formData.append('email', email)
-        formData.append('content', content)
-        console.log(formData)
+    const addComment = (name, email, content) => {
+        if (errors.length > 0) return
+        console.log(name, email, content)
+        dispatch(postComment(name, email, content))
+
     }
 
     return (
@@ -63,8 +61,8 @@ const ContactModal = () => {
                     <textarea value={content} onChange={e => setContent(e.target.value)}></textarea>
                 </div>
                 <div className='contact-form-buttons'>
-                    <button style={{ 'marginRight': '20px' }} onClick={(e) => postComment(e, name, email, content)} required >SEND MESSAGE</button>
-                    <button onClick={resetForm}>RESET</button>
+                    <div className='contact-form-btn' style={{ 'marginRight': '20px' }} onClick={e => addComment(name, email, content)} required >SEND MESSAGE</div>
+                    <div className='contact-form-btn' onClick={resetForm}>RESET</div>
                 </div>
                 <div className='contact-social-container'>
 

@@ -16,7 +16,7 @@ def get_comments():
     return { 'comments': comments }
 
 
-@comment_routes.route('')
+@comment_routes.route('', methods=['POST'])
 def post_comment():
     '''
     create a new comment

@@ -25,11 +25,11 @@ export const getPosts = () => async (dispatch) => {
   }
 }
 
-export const createPost = (name, email, content) => async (dispatch) => {
+export const createPost = (title, body, photo) => async (dispatch) => {
   const formData = new FormData()
-  formData.append('name', name)
-  formData.append('email', email)
-  formData.append('content', content)
+  formData.append('title', title)
+  formData.append('body', body)
+  formData.append('photo', photo)
   const res = await fetch('/api/posts', {
     method: 'POST',
     body: formData
@@ -58,7 +58,7 @@ export default function reducer(state = initialState, action) {
     case LOAD_POSTS:
       return { posts: action.payload };
     case ADD_POST:
-      return { posts: [...state, action.payload] }
+      return { ...state, posts: [...action.payload] }
     default:
       return state;
   }

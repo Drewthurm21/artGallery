@@ -78,7 +78,7 @@
     margin: 40px 20px 20px 0px;
 }
 
-.contact-form-buttons > button {
+.contact-form-buttons > div {
     display: flex;
     padding: 10px 20px 10px 20px;
     font-weight: bold;
@@ -90,7 +90,7 @@
     cursor: pointer;
 }
 
-.contact-form-buttons > button:hover {
+.contact-form-buttons > div:hover {
     color: white;
     background-color: var(--TEAL);
 }
