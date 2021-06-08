@@ -13,9 +13,31 @@ def get_comments():
     '''
     query = Comment.query.order_by(desc(Comment.created_at)).all()
     comments = [comment.to_dict() for comment in query]
-    return {'comments': comments}
+    return { 'comments': comments }
 
 
+@comment_routes.route('')
+def post_comment():
+    '''
+    create a new comment
+    '''
+    name = request.form['name']
+    email = request.form['email']
+    content = request.form['content']
+
+    if name and email and content:
+        comment = Comment(
+            name = name,
+            email = email,
+            content = content
+        )
+        db.session.add(comment)
+        db.session.commit()
+        return comment.to_dict()
+    else:
+        return { 'error': 'nope' }, 401
+    
+    
 @comment_routes.route('<int:id>', methods=['DELETE'])
 def remove_comment(id):
     '''
@@ -24,4 +46,6 @@ def remove_comment(id):
     comment = Comment.query.get(id)
     db.session.remove(comment)
     db.session.commit()
-    return f'Yeet, GTFO Troll! {"comment": comment}'
+    return { 'removed': comment.to_dict() }
+
+
