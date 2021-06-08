@@ -40,10 +40,12 @@ export const login = (email, password) => async (dispatch) => {
             password
         })
     });
+
     const data = await response.json();
     if (data.errors) {
         return data;
     }
+
     dispatch(setUser(data));
     return {};
 }
@@ -54,6 +56,7 @@ export const logout = () => async (dispatch) => {
             'Content-Type': 'application/json',
         }
     });
+
     const data = await response.json();
     dispatch(removeUser());
 };

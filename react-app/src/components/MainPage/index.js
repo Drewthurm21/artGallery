@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
+import { showModal, setCurrentModal } from '../../store/modals'
+import { useDispatch, useSelector } from "react-redux";
+
 import './MainPage.css';
 import GalleryModal from './GalleryModal'
 import BlogModal from './BlogModal'
 import ContactModal from './ContactModal'
 
+
 const MainPage = () => {
     const banner = require('../../frontend-assets/jessa_art_gallery_v2.png')
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     // const user = useSelector(state => state.session.user); 
 
     // ----- MODAL STATES ----- //
@@ -46,6 +49,11 @@ const MainPage = () => {
         }
     }
 
+    const callModal = () => {
+        dispatch(setCurrentModal(ContactModal))
+        dispatch(showModal())
+    }
+
     // ----- BASIC DISPLAY LOGIC || REPLACE WITH MODAL LATER ----- //
     let displayContent, component;
     if (openGallery || openBlog || openContact) {
@@ -77,7 +85,7 @@ const MainPage = () => {
             <div className='main-links-container'>
                 <div onClick={showGallery} className='main-link'>Gallery</div>
                 <div onClick={showBlog} className='main-link'>Blog</div>
-                <div onClick={showContact} className='main-link'>Contact</div>
+                <div onClick={callModal} className='main-link'>Contact</div>
             </div>
             <div className='main-foot-container'>
                 © Jessa Lopez | Developed by CoolKidsCoop
