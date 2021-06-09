@@ -1,4 +1,9 @@
 .blog-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 10vh;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,8 +11,6 @@
     background-color: var(--CHARCOAL);
     border: 5px solid var(--TAN_BACKGROUND);
     border-radius: 10px;
-    height: 80vh;
-    width: 800px;
     overflow-y: scroll;
     opacity: .95;
     box-sizing: border-box;

@@ -10,8 +10,6 @@
     background-color: var(--DARK_GREEN);
     border: 3px solid var(--TAN_BACKGROUND);
     border-radius: 10px;
-    /* height: 80vh;
-    width: 800px; */
     overflow-y: scroll;
     opacity: .95;
     padding-bottom: 40px;

@@ -3,7 +3,7 @@
 .login-form-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 450px 1fr;
+    grid-template-rows: 1fr 750px 1fr;
     grid-template-areas:
         ' . . . '
         ' . login-form . '
@@ -13,7 +13,7 @@
     background-color: var(--CHARCOAL)
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .login-form-container {
     transform: scale(1.25)
   }
@@ -29,10 +29,10 @@
     grid-area: login-form;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: var(--TAN_BACKGROUND);
-    padding: 50px;
+    padding: 70px;
     color: var(--CHARCOAL);
     border-radius: 5px;
 }
@@ -51,6 +51,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 /* INPUTS */
@@ -59,7 +60,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 40px;
+    height: 50px;
     padding-left: 20px;
     width: 400px;
     font-weight: bold;

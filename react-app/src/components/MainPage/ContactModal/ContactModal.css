@@ -22,6 +22,7 @@
 
 /* CONTACT FORM & INPUTS */
 .contact-form {
+    height: 70vh;
     display: flex;
     flex-direction: column;
     background-color: var(--TAN_BACKGROUND);
@@ -33,7 +34,7 @@
 .contact-header-underline {
     border-bottom: 2px solid black;
     margin-top: 0px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 /* INPUTS */
@@ -46,29 +47,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 60px;
+    height: 50px;
     font-weight: bold;
 }
 
 .contact-form-input > input {
-    width: 270px;
-    height: 30px;
+    width: 320px;
+    height: 65px;
 
     outline: none;
     border: none;
     border-radius: 3px;
+
+    font-size: 20px;
 }
 
 /* TEXTAREA */
 .contact-form-textarea {
     display: flex;
     flex-direction:column;
-    margin-top: 20px;
+    margin-top: 70px;
     font-weight: bold;
 }
 
 .contact-form-textarea > textarea {
-    height: 200px;
+    height: 750px;
+    width: 740px;
     outline: none;
     border: none;
     border-radius: 3px;
