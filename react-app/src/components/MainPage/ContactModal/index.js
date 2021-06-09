@@ -10,7 +10,7 @@ const ContactModal = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [content, setContent] = useState('')
-    let errors = []
+    const [errors, setErrors] = useState('')
 
     const isEmail = (email) => {
         const regex = new RegExp(/^\w+@([0-9a-zA-Z]+[.])+[a-z]{2,4}$/);
@@ -18,10 +18,13 @@ const ContactModal = () => {
     }
 
     useEffect(() => {
-
-        if (name.length < 1) errors.push('Please enter a name.')
-        if (!(isEmail(email))) errors.push('Please enter an email.')
-        if (content.length < 1) errors.push('Please enter a comment.')
+        setErrors([])
+        let newErrors = []
+        if (name.length < 1) newErrors.push('Please enter a name.')
+        if (!(isEmail(email))) newErrors.push('Please enter a valid email.')
+        if (content.length < 1) newErrors.push('Please enter a comment.')
+        setErrors(newErrors)
+        console.log(newErrors)
         console.log(errors)
     }, [name, email, content])
 
@@ -41,15 +44,13 @@ const ContactModal = () => {
 
     return (
         <div className='contact-container'>
-            <ul>
-                {
-                    errors.map(error => (
-                        <li style={{ 'color': 'red' }}>{error}</li>
-                    ))
-                }
-            </ul>
             <form className='contact-form'>
                 <h2 className='contact-header-underline'>Contact</h2>
+                <ul>
+                    {errors.length > 0 &&
+                        errors.map(error => <li style={{ 'color': 'red' }}>{error}</li>)
+                    }
+                </ul>
                 <div className='contact-form-inputs-container'>
                     <div className='contact-form-input'>
                         <label>NAME</label>
