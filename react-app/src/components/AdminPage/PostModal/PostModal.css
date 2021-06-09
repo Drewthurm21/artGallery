@@ -1,0 +1,108 @@
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--CHARCOAL);
+    border: 5px solid var(--TAN_BACKGROUND);
+    border-radius: 10px;
+    height: 80vh;
+    width: 800px;
+    overflow-y: scroll;
+    opacity: .95;
+    box-sizing: border-box;
+}
+
+.blog-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* BLOG FORM & INPUTS */
+.blog-form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--TAN_BACKGROUND);
+    padding: 50px;
+    color: var(--CHARCOAL);
+    border-radius: 5px;
+}
+
+.blog-header-underline {
+    border-bottom: 2px solid black;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+/* INPUTS */
+.blog-form-inputs-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.blog-form-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60px;
+    font-weight: bold;
+}
+
+.blog-form-input > input {
+    width: 270px;
+    height: 30px;
+
+    outline: none;
+    border: none;
+    border-radius: 3px;
+}
+
+/* TEXTAREA */
+.blog-form-textarea {
+    display: flex;
+    flex-direction:column;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.blog-form-textarea > textarea {
+    height: 200px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+/* BUTTONS */
+.blog-form-buttons {
+    display: flex;
+    margin: 40px 20px 20px 0px;
+}
+
+.blog-form-buttons > div {
+    display: flex;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+    transition: background-color 300ms, color 300ms;
+    cursor: pointer;
+}
+
+.blog-form-buttons > div:hover {
+    color: white;
+    background-color: var(--TEAL);
+}
+
+
+/* SOCIAL MEDIA LINKS */
+.blog-social-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end;   
+}
+
+.blog-social-icon {
+    margin: 15px 15px 0px 0px;
+}
