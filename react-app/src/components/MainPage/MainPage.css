@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap');
 
-@media only screen and (max-width:500px) {
-    .main-container { 
-        background-size: cover;
-    } 
-}
-
 /* .main-container {
     background-image: url("../../frontend-assets/mushrooms.JPG");
     background-color: var(--TAN_BACKGROUND) ;
@@ -26,6 +20,7 @@
 
 /* BACKGROUND IMAGES */
 .bg-image {
+    background-image: url("https://github.com/Drewthurm21/artGallery/blob/main/images/cat.JPG?raw=true");
     height: 100vh;
     width: 100vw;
     background-position: center;
@@ -46,10 +41,10 @@
     position: fixed;
     width: 500px;
     height: 200px;
-    top: 10%;
+    top: 15%;
     left: 50%;
-    margin-top: -100px; /* Negative half of height. */
-    margin-left: -180px; /* Negative half of width. */
+    margin-top: -100px; 
+    margin-left: -180px; 
 }
 
 .main-banner-image {
@@ -59,21 +54,23 @@
 /* MODAL LINKS */
 .main-links-container {
     position: fixed;
-    width: 500px;
+    width: fit-content;
     height: 200px;
     top: 90%;
     left: 50%;
-    margin-top: -100px; /* Negative half of height. */
-    margin-left: -250px; /* Negative half of width. */
+    margin-top: -100px; 
+    margin-left: -390px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    z-index: 3;
 }
 
 .main-link {
     display: flex;
     justify-content: center;
-    width: 70px;
+    width: 240px;
+    height: 60px;
 
     border: 2px solid grey;
     border-radius: 3px;
@@ -83,6 +80,7 @@
     padding: 10px;
 
     font-family: 'Nunito Sans', sans-serif;
+    font-size: 30px;
     font-weight: bold;
     color: var(--CHARCOAL);
 

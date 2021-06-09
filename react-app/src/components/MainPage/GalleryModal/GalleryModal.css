@@ -12,6 +12,7 @@
     overflow-y: scroll;
     opacity: .95;
     box-sizing: border-box;
+    animation: fade-in 300ms linear;
 }
 
 .gallery-container::-webkit-scrollbar {
@@ -70,3 +71,8 @@
 }
 .row3-S { grid-area: row3-S; background-color: var(--FOREST_GREEN)}
 .row3-L { grid-area: row3-L; background-color: var(--DARK_GREEN)}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

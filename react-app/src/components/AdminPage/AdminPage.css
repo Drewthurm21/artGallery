@@ -20,6 +20,7 @@
     align-items: center;
     height: 100%;
     width: 100%; 
+    font-size: 30px;
 }
 .admin-footer { grid-area: admin-footer }
 
@@ -55,7 +56,7 @@
     display: flex;
     flex-direction: column;
 
-    height: fit-content;
+    height: 560px;
     width: 90%;
     margin-top: 2.5rem;
 
@@ -70,7 +71,7 @@
     display: flex;
     justify-content: space-between;
     
-    height: 3.3rem;
+    height: 5.3rem;
     width: 100%;
     padding: 0px 20px 0px 20px;
     box-sizing: border-box;
@@ -80,14 +81,16 @@
 }
 
 .comment-post-content {
-    height: 12rem;
+    height: 24rem;
     width: 100%;
 
     padding: 0px 20px 0px 20px;
     box-sizing: border-box;
 
     background-color: var(--GREY_SHADOW);
-    color: var(--CHARCOAL)
+    color: var(--CHARCOAL);
+
+    font-size: 40px
 }
 
 
