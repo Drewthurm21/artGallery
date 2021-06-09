@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { postComment } from '../../../store/comments'
+import { hideModal } from '../../../store/modals'
 import './ContactModal.css';
 
 const ContactModal = () => {
@@ -17,14 +18,12 @@ const ContactModal = () => {
     }
 
     useEffect(() => {
+
         if (name.length < 1) errors.push('Please enter a name.')
         if (!(isEmail(email))) errors.push('Please enter an email.')
         if (content.length < 1) errors.push('Please enter a comment.')
         console.log(errors)
-    }, [name, email, content, errors])
-
-    // const checkErrors = () => {
-    // }
+    }, [name, email, content])
 
     const resetForm = () => {
         setName('')
@@ -33,11 +32,11 @@ const ContactModal = () => {
     }
 
     const addComment = () => {
-        errors = []
         if (errors.length > 0) return
 
         console.log(name, email, content)
         dispatch(postComment(name, email, content))
+        dispatch(hideModal())
     }
 
     return (

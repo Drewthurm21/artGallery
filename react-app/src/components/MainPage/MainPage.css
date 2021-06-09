@@ -6,7 +6,7 @@
     } 
 }
 
-.main-container {
+/* .main-container {
     background-image: url("../../frontend-assets/mushrooms.JPG");
     background-color: var(--TAN_BACKGROUND) ;
     background-repeat: no-repeat;
@@ -22,16 +22,34 @@
         '  . banner .  '
         '  . links . '
         '  . foot . ';
+} */
+
+/* BACKGROUND IMAGES */
+.bg-image {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.img1 { background-image: url("https://github.com/Drewthurm21/artGallery/blob/main/images/cat.JPG?raw=true"); }
+.img2 { background-image: url("https://github.com/Drewthurm21/artGallery/blob/main/images/smallbird.JPG?raw=true"); }
+.img3 { background-image: url("https://github.com/Drewthurm21/artGallery/blob/main/images/mushrooms.JPG?raw=true"); }
+.img4 { background-image: url("https://github.com/Drewthurm21/artGallery/blob/main/images/mushroom.JPG?raw=true"); }
+.img5 { background-image: url("https://github.com/Drewthurm21/artGallery/blob/main/images/flower.JPG?raw=true"); }
+.img6 { background-image: url("https://github.com/Drewthurm21/artGallery/blob/main/images/mountain.JPG?raw=true"); }
+
 
 /* BANNER IMAGE */
 .main-banner-container {
-    grid-area: banner;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 20px 0px 0px 0px;
-    opacity: .95;
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    top: 10%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -180px; /* Negative half of width. */
 }
 
 .main-banner-image {
@@ -40,7 +58,13 @@
 
 /* MODAL LINKS */
 .main-links-container {
-    grid-area: links;
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    top: 90%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */
     display: flex;
     justify-content: center;
     align-items: flex-end;

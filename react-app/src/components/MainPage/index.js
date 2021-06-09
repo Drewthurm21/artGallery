@@ -34,35 +34,17 @@ const MainPage = () => {
         dispatch(showModal())
     }
 
-
-    // ----- BASIC DISPLAY LOGIC || REPLACE WITH MODAL LATER ----- //
-    let displayContent, component;
-    if (openGallery || openBlog || openContact) {
-        if (openGallery) component = <GalleryModal />
-        if (openBlog) component = <BlogModal />
-        if (openContact) component = <ContactModal />
-
-        displayContent = (
-            <div className='main-banner-container'>
-                { component}
-            </div>
-        )
-    } else (
-        displayContent = (
-            <>
-                <div className='main-banner-container'>
-                    <img className='main-banner-image' src={banner}></img>
-                </div>
-            </>
-        )
-    )
-    // ------------------------------------------------------------- //
-
-
     return (
         <div className='main-container'>
-
-            { displayContent}
+            <div class="bg-image img1"></div>
+            <div class="bg-image img2"></div>
+            <div class="bg-image img3"></div>
+            <div class="bg-image img4"></div>
+            <div class="bg-image img5"></div>
+            <div class="bg-image img6"></div>
+            <div className='main-banner-container'>
+                <img className='main-banner-image' src={banner}></img>
+            </div>
             <div className='main-links-container'>
                 <div onClick={showGallery} className='main-link'>Gallery</div>
                 <div onClick={showBlog} className='main-link'>Blog</div>

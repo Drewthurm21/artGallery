@@ -15,21 +15,6 @@ const AdminPage = () => {
         console.log(comments)
     }, [])
 
-    let commentsSection;
-    if (comments) {
-        commentsSection =
-            comments.map(comment => (
-                <div className='comment-post-container'>
-                    <div className='comment-post-header'>
-                        <p>From: {comment.name}</p>
-                        <p>Email: {comment.email}</p>
-                    </div>
-                    <div className='comment-post-content'>
-                        <p>{comment.content}</p>
-                    </div>
-                </div>))
-    }
-
     return (
         <div className='admin-container'>
             <div className='admin-header'>
