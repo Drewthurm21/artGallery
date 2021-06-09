@@ -1,14 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { showModal, setCurrentModal } from '../../store/modals'
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getComments } from '../../store/comments'
 import './AdminPage.css';
 import NavBar from './NavBar'
 
 
 const AdminPage = () => {
-    // const banner = require('../../frontend-assets/jessa_art_gallery_v2.png')
-    // const dispatch = useDispatch();
-    // const user = useSelector(state => state.session.user);
+    const dispatch = useDispatch();
+    const comments = useSelector(state => state.comments.comments);
+
+    useEffect(() => {
+        dispatch(getComments())
+        console.log(comments)
+    }, [])
+
+    let commentsSection;
+    if (comments) {
+        commentsSection =
+            comments.map(comment => (
+                <div className='comment-post-container'>
+                    <div className='comment-post-header'>
+                        <p>From: {comment.name}</p>
+                        <p>Email: {comment.email}</p>
+                    </div>
+                    <div className='comment-post-content'>
+                        <p>{comment.content}</p>
+                    </div>
+                </div>))
+    }
 
     return (
         <div className='admin-container'>
@@ -17,46 +37,17 @@ const AdminPage = () => {
             </div>
             <div className='admin-content'>
                 <div className='comment-container'>
-                    <div className='comment-post-container'>
-                        <div className='comment-post-header'>
-
+                    {comments && comments.map(comment => (
+                        <div className='comment-post-container'>
+                            <div className='comment-post-header'>
+                                <p>From: {comment.name}</p>
+                                <p>Email: {comment.email}</p>
+                            </div>
+                            <div className='comment-post-content'>
+                                <p>{comment.content}</p>
+                            </div>
                         </div>
-                        <div className='comment-post-content'>
-
-                        </div>
-                    </div>
-                    <div className='comment-post-container'>
-                        <div className='comment-post-header'>
-
-                        </div>
-                        <div className='comment-post-content'>
-
-                        </div>
-                    </div>
-                    <div className='comment-post-container'>
-                        <div className='comment-post-header'>
-
-                        </div>
-                        <div className='comment-post-content'>
-
-                        </div>
-                    </div>
-                    <div className='comment-post-container'>
-                        <div className='comment-post-header'>
-
-                        </div>
-                        <div className='comment-post-content'>
-
-                        </div>
-                    </div>
-                    <div className='comment-post-container'>
-                        <div className='comment-post-header'>
-
-                        </div>
-                        <div className='comment-post-content'>
-
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
             <div className="admin-footer">
