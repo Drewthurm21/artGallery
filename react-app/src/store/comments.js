@@ -60,7 +60,7 @@ const initialState = { comments: null, comment: null }
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case LOAD_COMMENTS:
-      return { comments: action.payload };
+      return { ...state, comments: action.payload };
     case ADD_COMMENT:
       return { ...state, comment: action.payload }
     default:

@@ -5,8 +5,8 @@ import './BlogModal.css';
 
 const BlogModal = () => {
     const dispatch = useDispatch();
-    const user = useSelector(state => state.session.user);
     const posts = useSelector(state => state.posts.posts)
+    // const user = useSelector(state => state.session.user);
 
     useEffect(() => {
         dispatch(getPosts())
