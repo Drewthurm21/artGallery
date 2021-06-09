@@ -6,7 +6,7 @@ def seed_photos():
         Photo(name='cat', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/cat.JPG?raw=true'),
         Photo(name='owl1', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/owl1.JPG?raw=true'),
         Photo(name='leaf', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/leaf.JPG?raw=true'),
-        Photo(name='owl2', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/owl2.JPG?raw=true'),
+        # Photo(name='owl2', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/owl2.JPG?raw=true'),
         Photo(name='pines', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/pines.JPG?raw=true'),
         Photo(name='plant', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/plant.JPG?raw=true'),
         Photo(name='flower', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/flower.JPG?raw=true'),
