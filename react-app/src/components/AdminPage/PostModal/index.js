@@ -8,7 +8,7 @@ const PostModal = () => {
 
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-    const [image, setImage] = useState('')
+    const [image, setImage] = useState(null)
 
     const updateImage = (e) => {
         const file = e.target.files[0];
@@ -18,7 +18,7 @@ const PostModal = () => {
     const resetForm = () => {
         setTitle('')
         setBody('')
-        setImage('')
+        setImage(null)
     }
 
     const makePost = () => {
@@ -36,7 +36,7 @@ const PostModal = () => {
                     </div>
                     <div style={{ 'marginLeft': '20px' }} className='blog-form-input'>
                         <label>PHOTO</label>
-                        <input type='file' value={image} onChange={updateImage} ></input>
+                        <input className='upload-image-btn' type='file' onChange={updateImage} ></input>
                     </div>
                 </div>
                 <div className='blog-form-textarea'>
