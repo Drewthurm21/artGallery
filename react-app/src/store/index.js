@@ -3,12 +3,14 @@ import thunk from 'redux-thunk';
 import session from './session'
 import comments from './comments'
 import posts from './posts'
+import photos from './photos'
 import modal from './modals'
 
 const rootReducer = combineReducers({
     session,
     comments,
     posts,
+    photos,
     modal
 });
 

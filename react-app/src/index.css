@@ -25,6 +25,7 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     color: var(--CHARCOAL);
     margin: 0;
+    overflow-x: hidden;
 }
 
 .flex-center { 

@@ -9,7 +9,7 @@ import ContactModal from './ContactModal'
 
 
 const MainPage = () => {
-    const banner = require('../../frontend-assets/jessa_art_gallery_v2.png')
+    const banner = require('../../frontend-assets/logo_v2.png')
     const dispatch = useDispatch();
     // const user = useSelector(state => state.session.user); 
 
