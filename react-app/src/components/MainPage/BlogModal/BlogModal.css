@@ -68,6 +68,10 @@
     color: var(--CHARCOAL)
 }
 
+.blog-img {
+    height: 70px;
+    width:70px;
+}
 
 @keyframes fade-in {
     0% {opacity: 0;}

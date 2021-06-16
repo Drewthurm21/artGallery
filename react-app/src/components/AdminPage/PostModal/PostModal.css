@@ -28,6 +28,7 @@
     padding: 50px;
     color: var(--CHARCOAL);
     border-radius: 5px;
+    height: 70%;
 }
 
 .blog-header-underline {
@@ -59,16 +60,18 @@
     border-radius: 3px;
 }
 
+
 /* TEXTAREA */
 .blog-form-textarea {
     display: flex;
     flex-direction:column;
     margin-top: 20px;
     font-weight: bold;
+    height: 90%;
 }
 
 .blog-form-textarea > textarea {
-    height: 200px;
+    height: 600px;
     outline: none;
     border: none;
     border-radius: 3px;

@@ -77,16 +77,19 @@
     box-sizing: border-box;
     
     background-color: var(--BOX_SHADOW);
-    color: var(--CHARCOAL)
+    color: var(--CHARCOAL);
+
+    font-size: 30px;
 }
 
 .comment-post-content {
     height: 24rem;
     width: 100%;
-
+    
     padding: 0px 20px 0px 20px;
     box-sizing: border-box;
-
+    font-size: 30px;
+    
     background-color: var(--GREY_SHADOW);
     color: var(--CHARCOAL);
 

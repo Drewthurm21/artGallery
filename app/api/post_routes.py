@@ -1,6 +1,7 @@
 from flask import Blueprint, request
 from flask_login import login_required
 from app.models import db, Post
+from app.aws import get_unique_filename, upload_file_to_s3
 
 
 post_routes = Blueprint('posts', __name__)
@@ -22,8 +23,24 @@ def create_post():
     '''
     create a new blog post
     '''
-    #finish this when blog form is complete 
+    title = request.form['title']
+    body = request.form['body']
+    url = None
 
+    if 'image' in request.files:
+        image = request.files['image']
+        image.filename = get_unique_filename(image.filename)
+        upload = upload_file_to_s3(image)
+        url = upload['url']
+
+    post = Post(
+        title=title,
+        body=body,
+        photo_url=url
+    )
+    db.session.add(post)
+    db.session.commit()
+    return post.to_dict()
 
 @post_routes.route('<int:id>')
 def get_post(id):

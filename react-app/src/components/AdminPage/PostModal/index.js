@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createPost } from '../../../store/posts'
+import { hideModal } from '../../../store/modals'
 import './PostModal.css';
 
 const PostModal = () => {
@@ -8,7 +9,7 @@ const PostModal = () => {
 
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-    const [image, setImage] = useState('')
+    const [image, setImage] = useState(null)
 
     const updateImage = (e) => {
         const file = e.target.files[0];
@@ -18,11 +19,12 @@ const PostModal = () => {
     const resetForm = () => {
         setTitle('')
         setBody('')
-        setImage('')
+        setImage(null)
     }
 
     const makePost = () => {
-        console.log(title, body, image)
+        dispatch(createPost(title, body, image))
+        dispatch(hideModal())
     }
 
     return (
@@ -36,7 +38,7 @@ const PostModal = () => {
                     </div>
                     <div style={{ 'marginLeft': '20px' }} className='blog-form-input'>
                         <label>PHOTO</label>
-                        <input type='file' value={image} onChange={updateImage} ></input>
+                        <input className='upload-image-btn' type='file' accept='image/*' onChange={updateImage} ></input>
                     </div>
                 </div>
                 <div className='blog-form-textarea'>

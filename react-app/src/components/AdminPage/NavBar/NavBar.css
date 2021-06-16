@@ -14,10 +14,12 @@ nav {
 }
 
 .nav-link {
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px;
+    width: 250px;
+    height: 60px;
 
     border: 2px solid grey;
     border-radius: 5px;
@@ -27,6 +29,7 @@ nav {
 
     font-family: 'Nunito Sans', sans-serif;
     font-weight: bold;
+    font-size: 30px;
     color: var(--CHARCOAL);
     cursor: pointer;
     text-decoration: none;
