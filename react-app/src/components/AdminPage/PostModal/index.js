@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createPost } from '../../../store/posts'
 import { hideModal } from '../../../store/modals'
