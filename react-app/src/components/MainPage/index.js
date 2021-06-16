@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { showModal, setCurrentModal } from '../../store/modals'
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import './MainPage.css';
 import GalleryModal from './GalleryModal'
@@ -11,12 +11,6 @@ import ContactModal from './ContactModal'
 const MainPage = () => {
     const banner = require('../../frontend-assets/logo_v2.png')
     const dispatch = useDispatch();
-    // const user = useSelector(state => state.session.user); 
-
-    // ----- MODAL STATES ----- //
-    const [openGallery, setOpenGallery] = useState(false)
-    const [openBlog, setOpenBlog] = useState(false)
-    const [openContact, setOpenContact] = useState(false)
 
     // ----- MODAL ONCLICK FUNCTIONS ----- //
     const showGallery = () => {
@@ -36,14 +30,14 @@ const MainPage = () => {
 
     return (
         <div className='main-container'>
-            <div class="bg-image img1"></div>
-            <div class="bg-image img2"></div>
-            <div class="bg-image img3"></div>
-            <div class="bg-image img4"></div>
-            <div class="bg-image img5"></div>
-            <div class="bg-image img6"></div>
+            <div className="bg-image img1"></div>
+            <div className="bg-image img2"></div>
+            <div className="bg-image img3"></div>
+            <div className="bg-image img4"></div>
+            <div className="bg-image img5"></div>
+            <div className="bg-image img6"></div>
             <div className='main-banner-container'>
-                <img className='main-banner-image' src={banner}></img>
+                <img className='main-banner-image' alt='' src={banner}></img>
             </div>
             <div className='main-links-container'>
                 <div onClick={showGallery} className='main-link'>Gallery</div>

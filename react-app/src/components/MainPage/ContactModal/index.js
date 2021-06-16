@@ -24,8 +24,6 @@ const ContactModal = () => {
         if (!(isEmail(email))) newErrors.push('Please enter a valid email.')
         if (content.length < 1) newErrors.push('Please enter a comment.')
         setErrors(newErrors)
-        console.log(newErrors)
-        console.log(errors)
     }, [name, email, content])
 
     const resetForm = () => {
@@ -48,7 +46,7 @@ const ContactModal = () => {
                 <h2 className='contact-header-underline'>Contact</h2>
                 <ul>
                     {errors.length > 0 &&
-                        errors.map(error => <li style={{ 'color': 'red' }}>{error}</li>)
+                        errors.map(error => <li key={error} style={{ 'color': 'red' }}>{error}</li>)
                     }
                 </ul>
                 <div className='contact-form-inputs-container'>

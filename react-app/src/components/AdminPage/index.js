@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-// import { showModal, setCurrentModal } from '../../store/modals'
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getComments } from '../../store/comments'
 import './AdminPage.css';
@@ -12,8 +11,7 @@ const AdminPage = () => {
 
     useEffect(() => {
         dispatch(getComments())
-        console.log(comments)
-    }, [])
+    }, [dispatch])
 
     return (
         <div className='admin-container'>
