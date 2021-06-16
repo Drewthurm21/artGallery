@@ -1,15 +1,9 @@
 
 const LOAD_POSTS = 'session/LOAD_POSTS'
-const ADD_POST = 'session/ADD_POST'
 
 const loadPosts = (posts) => ({
   type: LOAD_POSTS,
   payload: posts
-})
-
-const addPost = (post) => ({
-  type: ADD_POST,
-  payload: post
 })
 
 export const getPosts = () => async (dispatch) => {
@@ -38,8 +32,10 @@ export const createPost = (title, body, image) => async (dispatch) => {
 
   if (res.ok) {
     const post = await res.json()
-    dispatch(addPost(post.post))
+    return post
   }
+
+  return 'failed'
 }
 
 export const deletePost = (id) => async (dispatch) => {
@@ -48,7 +44,7 @@ export const deletePost = (id) => async (dispatch) => {
   })
 
   if (res.ok) {
-    return 'yoink'
+    return 'yoink! ~ deleted'
   }
 }
 
@@ -58,8 +54,6 @@ export default function reducer(state = initialState, action) {
   switch (action.type) {
     case LOAD_POSTS:
       return { posts: action.payload };
-    case ADD_POST:
-      return { ...state, posts: [...action.payload] }
     default:
       return state;
   }
