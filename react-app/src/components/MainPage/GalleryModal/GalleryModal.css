@@ -5,13 +5,15 @@
     bottom: 10vh;
     left: 0;
     background-color:var(--TAN_BACKGROUND);
+
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     border: 3px solid var(--TAN_BACKGROUND);
     border-radius: 8px;
     overflow-y: scroll;
     opacity: .95;
     box-sizing: border-box;
+    animation: fade-in 300ms linear;
 }
 
 .gallery-container::-webkit-scrollbar {
@@ -27,46 +29,13 @@
     border-radius: 5px;
 }
 
+.row1-L { border: 5px solid grey; grid-area: row1-L; height: 400px; width: 67%; background-color: var(--RUST); background-position: center center;}
+.row1-S { border: 5px solid grey; grid-area: row1-S; height: 400px; width: 33%; background-color: var(--LIGHT_TAN) }
+.row2-W { border: 5px solid grey; grid-area: row2-W; height: 400px; width: 100%; background-color: var(--TEAL)}
+.row3-S { border: 5px solid grey; grid-area: row3-S; height: 400px; width: 33%; background-color: var(--FOREST_GREEN)}
+.row3-L { border: 5px solid grey; grid-area: row3-L; height: 400px; width: 67%; background-color: var(--DARK_GREEN)}
 
-/* ROW TYPE 1 */
-.gallery-row-1 {
-    margin-right:3px;
-    margin-left: 3px;
-    height: 275px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-    ' row1-L row1-S';
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
-.row1-L { grid-area: row1-L; background-color: var(--RUST) }
-.row1-S { grid-area: row1-S; background-color: var(--LIGHT_TAN) }
-
-
-/* ROW TYPE 2 */
-.gallery-row-2 {
-    margin-right:3px;
-    margin-left: 3px;
-    height: 275px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-    ' row2-W';
-}
-.row2-W { grid-area: row2-W; background-color: var(--TEAL)}
-
-
-/* ROW TYPE 3 */
-.gallery-row-3 {
-    margin-right:3px;
-    margin-left: 3px;
-    height: 275px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        ' row3-S row3-L';
-}
-.row3-S { grid-area: row3-S; background-color: var(--FOREST_GREEN)}
-.row3-L { grid-area: row3-L; background-color: var(--DARK_GREEN)}
