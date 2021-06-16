@@ -25,11 +25,12 @@ export const getPosts = () => async (dispatch) => {
   }
 }
 
-export const createPost = (title, body, photo) => async (dispatch) => {
+export const createPost = (title, body, image) => async (dispatch) => {
   const formData = new FormData()
   formData.append('title', title)
   formData.append('body', body)
-  formData.append('photo', photo)
+  formData.append('image', image)
+
   const res = await fetch('/api/posts', {
     method: 'POST',
     body: formData
