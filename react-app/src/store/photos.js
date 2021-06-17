@@ -32,8 +32,8 @@ export const getPhoto = (id) => async (dispatch) => {
     })
 
     if (res.ok) {
-        const data = await res.json()
-        dispatch(loadPhoto(data.photo))
+        const photo = await res.json()
+        dispatch(loadPhoto(photo))
     }
 }
 

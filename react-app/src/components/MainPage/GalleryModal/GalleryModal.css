@@ -36,6 +36,18 @@
 .row3-S { border: 5px solid grey; grid-area: row3-S; height: 400px; width: 50%; background-color: var(--FOREST_GREEN)}
 .row3-L { border: 5px solid grey; grid-area: row3-L; height: 400px; width: 50%; background-color: var(--DARK_GREEN)}
 
+.single-img-container {
+    position: fixed;
+    top: 5%;
+    left: 3%;
+    right: 3%;
+}
+
+.single-img {
+    width: 100%;
+    max-height: 90%;
+}
+
 @keyframes fade-in {
     0% {opacity: 0;}
     100% {opacity: 1;}
