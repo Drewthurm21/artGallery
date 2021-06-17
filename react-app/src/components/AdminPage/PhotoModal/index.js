@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createPost } from '../../../store/posts'
+import { uploadPhoto } from '../../../store/photos'
 import { hideModal } from '../../../store/modals'
 import './PhotoModal.css';
 
@@ -8,6 +8,7 @@ const PhotoModal = () => {
   const dispatch = useDispatch();
 
   const [image, setImage] = useState(null)
+  const [title, setTitle] = useState('')
 
   const updateImage = (e) => {
     const file = e.target.files[0];
@@ -22,9 +23,9 @@ const PhotoModal = () => {
     dispatch(hideModal())
   }
 
-  const uploadPhoto = () => {
-    console.log('click')
-    console.log(image !== undefined)
+  const postPhoto = () => {
+
+    dispatch(uploadPhoto(title, image))
   }
 
   return (
@@ -32,6 +33,10 @@ const PhotoModal = () => {
       <form className='blog-form-form'>
         <h2 className='blog-form-header-underline'>Upload New Image</h2>
         <div className='blog-form-form-inputs-container'>
+          <div style={{ 'marginLeft': '20px' }} className='blog-form-form-input'>
+            <label>TITLE</label>
+            <input value={title} className='upload-image-btn' type='text' onChange={e => setTitle(e.target.value)} ></input>
+          </div>
           <div style={{ 'marginLeft': '20px' }} className='blog-form-form-input'>
             <label>PHOTO</label>
             <input className='upload-image-btn' type='file' accept='image/*' id='imageUpload' onChange={updateImage} ></input>
@@ -44,7 +49,7 @@ const PhotoModal = () => {
 
         {image &&
           <div className='blog-form-form-buttons'>
-            <div className='blog-form-form-btn' style={{ 'marginRight': '20px' }} onClick={uploadPhoto} required >UPLOAD PHOTO</div>
+            <div className='blog-form-form-btn' style={{ 'marginRight': '20px' }} onClick={postPhoto} required >UPLOAD PHOTO</div>
           </div>}
 
         <div className='blog-form-social-container'>
