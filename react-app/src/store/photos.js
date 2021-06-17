@@ -37,6 +37,17 @@ export const getPhoto = (id) => async (dispatch) => {
     }
 }
 
+export const getBlogPhoto = (id) => async (dispatch) => {
+    const res = await fetch(`/api/posts/${id}`, {
+        headers: { 'Content-Type': 'application/json' }
+    })
+
+    if (res.ok) {
+        const data = await res.json();
+        dispatch(loadPhoto(data))
+    }
+}
+
 
 const initialState = { photos: null, photo: null }
 
