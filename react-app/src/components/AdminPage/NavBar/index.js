@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { logout } from "../../../store/session";
 import { showModal, setCurrentModal } from '../../../store/modals'
 import PostModal from '../PostModal'
+import PhotoModal from '../PhotoModal'
 import './NavBar.css'
 
 
@@ -20,11 +21,20 @@ const NavBar = () => {
     dispatch(showModal())
   }
 
+  const addPhoto = () => {
+    dispatch(setCurrentModal(PhotoModal))
+    dispatch(showModal())
+  }
+
   return (
     <nav className='nav-links-container'>
       <NavLink className='nav-link' to="/" exact={true} activeClassName="active">
         Home
           </NavLink>
+      <div className='nav-link' onClick={addPhoto} exact={true} activeClassName="active">
+        Upload Photo
+          </div>
+
       <div className='nav-link' onClick={makePost} exact={true} activeClassName="active">
         Create Post
           </div>
