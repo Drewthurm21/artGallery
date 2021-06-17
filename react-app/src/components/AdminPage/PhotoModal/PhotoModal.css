@@ -29,6 +29,7 @@
   color: var(--CHARCOAL);
   border-radius: 5px;
   height: 70%;
+  width: 90vw;
 }
 
 .blog-form-header-underline {
@@ -36,6 +37,18 @@
   margin-top: 0px;
   margin-bottom: 40px;
 }
+
+/* PREVIEW IMAGE */
+
+.preview-img-container {
+  max-width: 90vw;
+}
+
+.preview-img {
+  max-width: 100%;
+}
+
+
 
 /* INPUTS */
 .blog-form-form-inputs-container{
@@ -60,23 +73,6 @@
   border-radius: 3px;
 }
 
-
-/* TEXTAREA */
-.blog-form-form-textarea {
-  display: flex;
-  flex-direction:column;
-  margin-top: 20px;
-  font-weight: bold;
-  height: 90%;
-}
-
-.blog-form-form-textarea > textarea {
-  height: 600px;
-  outline: none;
-  border: none;
-  border-radius: 3px;
-  margin-top: 5px;
-}
 
 /* BUTTONS */
 .blog-form-form-buttons {
