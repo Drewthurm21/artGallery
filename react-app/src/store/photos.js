@@ -48,13 +48,14 @@ export const getBlogPhoto = (id) => async (dispatch) => {
     }
 }
 
-export const uploadPhoto = (image) => async (dispatch) => {
+export const uploadPhoto = (title, image) => async (dispatch) => {
     const formData = new FormData()
+    formData.append('title', title)
     formData.append('image', image)
 
     await fetch('/api/photos', {
         method: 'POST',
-        headers: formData
+        body: formData
     })
 }
 
