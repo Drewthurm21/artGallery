@@ -20,6 +20,7 @@ const PhotoModal = () => {
 
   const uploadPhoto = () => {
     console.log('click')
+    console.log(image !== undefined)
   }
 
   return (
