@@ -30,7 +30,7 @@ const PhotoModal = () => {
   return (
     <div className='blog-form-container'>
       <form className='blog-form-form'>
-        <h2 className='blog-form-header-underline'>blog</h2>
+        <h2 className='blog-form-header-underline'>Upload New Image</h2>
         <div className='blog-form-form-inputs-container'>
           <div style={{ 'marginLeft': '20px' }} className='blog-form-form-input'>
             <label>PHOTO</label>
@@ -39,7 +39,7 @@ const PhotoModal = () => {
         </div>
 
         <div className='preview-img-container'>PREVIEW
-          <img id='imgPreview' src='#' alt='img'></img>
+          <img className='preview-img' id='imgPreview' src='#' alt='img'></img>
         </div>
 
         <div className='blog-form-form-buttons'>
