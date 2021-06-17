@@ -42,6 +42,7 @@ def create_post():
     db.session.commit()
     return post.to_dict()
 
+
 @post_routes.route('<int:id>')
 def get_post(id):
     '''

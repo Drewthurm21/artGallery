@@ -1,12 +1,21 @@
 import React, { useEffect } from "react";
-import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
+import { setCurrentModal } from '../../../store/modals'
+import { getBlogPhoto } from '../../../store/photos'
 import { getPosts } from '../../../store/posts'
+import SinglePhotoModal from '../GalleryModal/SinglePhoto'
 import './BlogModal.css';
 
 const BlogModal = () => {
     const dispatch = useDispatch();
     const posts = useSelector(state => state.posts.posts)
+
+
+    let showBlogPhoto = async (post) => {
+        await dispatch(getBlogPhoto(post.id))
+        dispatch(setCurrentModal(SinglePhotoModal))
+    }
+
 
     useEffect(() => {
         dispatch(getPosts())
@@ -19,9 +28,9 @@ const BlogModal = () => {
 
                     {post.photo_url &&
                         <div className='blog-img-container'>
-                            <NavLink to='/'>
+                            <div onClick={e => showBlogPhoto(post)}>
                                 <img className='blog-img' src={post.photo_url} alt=''></img>
-                            </NavLink>
+                            </div>
                         </div>
                     }
                     <div className='blog-post-header'>
