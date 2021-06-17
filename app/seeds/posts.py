@@ -7,8 +7,8 @@ faker = Faker()
 def seed_posts():
     for i in range(5):
         post = Post(
-            title=faker.words(3), 
-            body=faker.sentences(14),
+            title='Welcome!', 
+            body='Thank you for stopping by.',
             photo_url=None,
         )
         db.session.add(post)
