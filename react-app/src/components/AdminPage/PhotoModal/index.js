@@ -42,9 +42,10 @@ const PhotoModal = () => {
           <img className='preview-img' id='imgPreview' src='#' alt='img'></img>
         </div>
 
-        <div className='blog-form-form-buttons'>
-          <div className='blog-form-form-btn' style={{ 'marginRight': '20px' }} onClick={uploadPhoto} required >UPLOAD PHOTO</div>
-        </div>
+        {image &&
+          <div className='blog-form-form-buttons'>
+            <div className='blog-form-form-btn' style={{ 'marginRight': '20px' }} onClick={uploadPhoto} required >UPLOAD PHOTO</div>
+          </div>}
 
         <div className='blog-form-social-container'>
           <div className='blog-form-form-btn' onClick={closeForm}>CANCEL</div>
