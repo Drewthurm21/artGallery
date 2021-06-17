@@ -16,6 +16,7 @@ const BlogModal = () => {
         <div className='blog-container'>
             {posts.map(post => (
                 <div key={post.id} className='blog-post-container'>
+
                     {post.photo_url &&
                         <div className='blog-img-container'>
                             <NavLink to='/'>

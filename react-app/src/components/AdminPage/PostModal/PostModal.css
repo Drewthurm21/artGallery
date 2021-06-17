@@ -1,4 +1,4 @@
-.blog-container {
+.blog-form-container {
     position: fixed;
     top: 0;
     right: 0;
@@ -14,15 +14,14 @@
     overflow-y: scroll;
     opacity: .95;
     box-sizing: border-box;
-    transform: scale(1.3)
 }
 
-.blog-container::-webkit-scrollbar {
+.blog-form-container::-webkit-scrollbar {
     display: none;
 }
 
 /* BLOG FORM & INPUTS */
-.blog-form {
+.blog-form-form {
     display: flex;
     flex-direction: column;
     background-color: var(--TAN_BACKGROUND);
@@ -32,19 +31,19 @@
     height: 70%;
 }
 
-.blog-header-underline {
+.blog-form-header-underline {
     border-bottom: 2px solid black;
     margin-top: 0px;
     margin-bottom: 40px;
 }
 
 /* INPUTS */
-.blog-form-inputs-container{
+.blog-form-form-inputs-container{
     display: flex;
     flex-direction: row;
 }
 
-.blog-form-input{
+.blog-form-form-input{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -52,7 +51,7 @@
     font-weight: bold;
 }
 
-.blog-form-input > input {
+.blog-form-form-input > input {
     width: 270px;
     height: 30px;
 
@@ -63,7 +62,7 @@
 
 
 /* TEXTAREA */
-.blog-form-textarea {
+.blog-form-form-textarea {
     display: flex;
     flex-direction:column;
     margin-top: 20px;
@@ -71,7 +70,7 @@
     height: 90%;
 }
 
-.blog-form-textarea > textarea {
+.blog-form-form-textarea > textarea {
     height: 600px;
     outline: none;
     border: none;
@@ -80,12 +79,12 @@
 }
 
 /* BUTTONS */
-.blog-form-buttons {
+.blog-form-form-buttons {
     display: flex;
     margin: 40px 20px 20px 0px;
 }
 
-.blog-form-buttons > div {
+.blog-form-form-buttons > div {
     display: flex;
     padding: 10px 20px 10px 20px;
     font-weight: bold;
@@ -97,19 +96,19 @@
     cursor: pointer;
 }
 
-.blog-form-buttons > div:hover {
+.blog-form-form-buttons > div:hover {
     color: white;
     background-color: var(--TEAL);
 }
 
 
 /* SOCIAL MEDIA LINKS */
-.blog-social-container {
+.blog-form-social-container {
     display: flex;
     flex-direction: row; 
     justify-content: flex-end;   
 }
 
-.blog-social-icon {
+.blog-form-social-icon {
     margin: 15px 15px 0px 0px;
 }

@@ -2,7 +2,7 @@ from flask import Blueprint, request
 from flask_login import login_required
 from app.models import db, Post
 from app.aws import get_unique_filename, upload_file_to_s3
-
+from sqlalchemy import desc
 
 post_routes = Blueprint('posts', __name__)
 
@@ -12,7 +12,7 @@ def get_posts():
     '''
     return all posts
     '''
-    query = Post.query.all()
+    query = Post.query.order_by(desc(Post.created_at)).all()
     posts = [post.to_dict() for post in query]
     return {'posts': posts}
 

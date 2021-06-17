@@ -28,28 +28,28 @@ const PostModal = () => {
     }
 
     return (
-        <div className='blog-container'>
-            <form className='blog-form'>
-                <h2 className='blog-header-underline'>blog</h2>
-                <div className='blog-form-inputs-container'>
-                    <div className='blog-form-input'>
+        <div className='blog-form-container'>
+            <form className='blog-form-form'>
+                <h2 className='blog-form-header-underline'>blog</h2>
+                <div className='blog-form-form-inputs-container'>
+                    <div className='blog-form-form-input'>
                         <label>TITLE</label>
                         <input value={title} onChange={e => { setTitle(e.target.value) }} required ></input>
                     </div>
-                    <div style={{ 'marginLeft': '20px' }} className='blog-form-input'>
+                    <div style={{ 'marginLeft': '20px' }} className='blog-form-form-input'>
                         <label>PHOTO</label>
                         <input className='upload-image-btn' type='file' accept='image/*' onChange={updateImage} ></input>
                     </div>
                 </div>
-                <div className='blog-form-textarea'>
+                <div className='blog-form-form-textarea'>
                     <label>MESSAGE</label>
                     <textarea value={body} onChange={e => setBody(e.target.value)}></textarea>
                 </div>
-                <div className='blog-form-buttons'>
-                    <div className='blog-form-btn' style={{ 'marginRight': '20px' }} onClick={makePost} required >CREATE BLOGPOST</div>
+                <div className='blog-form-form-buttons'>
+                    <div className='blog-form-form-btn' style={{ 'marginRight': '20px' }} onClick={makePost} required >CREATE BLOGPOST</div>
                 </div>
-                <div className='blog-social-container'>
-                    <div className='blog-form-btn' onClick={resetForm}>RESET</div>
+                <div className='blog-form-social-container'>
+                    <div className='blog-form-form-btn' onClick={resetForm}>RESET</div>
                 </div>
             </form>
         </div>

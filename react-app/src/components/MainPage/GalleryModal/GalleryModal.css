@@ -29,11 +29,12 @@
     border-radius: 5px;
 }
 
-.row1-L { border: 5px solid grey; grid-area: row1-L; height: 400px; width: 67%; background-color: var(--RUST); background-position: center center;}
-.row1-S { border: 5px solid grey; grid-area: row1-S; height: 400px; width: 33%; background-color: var(--LIGHT_TAN) }
-.row2-W { border: 5px solid grey; grid-area: row2-W; height: 400px; width: 100%; background-color: var(--TEAL)}
-.row3-S { border: 5px solid grey; grid-area: row3-S; height: 400px; width: 33%; background-color: var(--FOREST_GREEN)}
-.row3-L { border: 5px solid grey; grid-area: row3-L; height: 400px; width: 67%; background-color: var(--DARK_GREEN)}
+.row1-L { border: 5px solid grey; grid-area: row1-L; height: 400px; width: 50%; background-color: var(--RUST); background-position: center center;}
+.row1-S { border: 5px solid grey; grid-area: row1-S; height: 400px; width: 50%; background-color: var(--LIGHT_TAN) }
+.row2-L { border: 5px solid grey; grid-area: row2-W; height: 400px; width: 50%; background-color: var(--TEAL)}
+.row2-R { border: 5px solid grey; grid-area: row2-W; height: 400px; width: 50%; background-color: var(--TEAL)}
+.row3-S { border: 5px solid grey; grid-area: row3-S; height: 400px; width: 50%; background-color: var(--FOREST_GREEN)}
+.row3-L { border: 5px solid grey; grid-area: row3-L; height: 400px; width: 50%; background-color: var(--DARK_GREEN)}
 
 @keyframes fade-in {
     0% {opacity: 0;}
