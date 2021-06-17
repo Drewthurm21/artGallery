@@ -12,6 +12,10 @@ const PhotoModal = () => {
   const updateImage = (e) => {
     const file = e.target.files[0];
     setImage(file);
+    if (file) {
+      let imgPreview = document.getElementById('imgPreview')
+      imgPreview.src = URL.createObjectURL(file)
+    }
   };
 
   const closeForm = () => {
@@ -30,8 +34,12 @@ const PhotoModal = () => {
         <div className='blog-form-form-inputs-container'>
           <div style={{ 'marginLeft': '20px' }} className='blog-form-form-input'>
             <label>PHOTO</label>
-            <input className='upload-image-btn' type='file' accept='image/*' onChange={updateImage} ></input>
+            <input className='upload-image-btn' type='file' accept='image/*' id='imageUpload' onChange={updateImage} ></input>
           </div>
+        </div>
+
+        <div className='preview-img-container'>PREVIEW
+          <img id='imgPreview' src='#' alt='img'></img>
         </div>
 
         <div className='blog-form-form-buttons'>
@@ -42,7 +50,7 @@ const PhotoModal = () => {
           <div className='blog-form-form-btn' onClick={closeForm}>CANCEL</div>
         </div>
       </form>
-    </div>
+    </div >
   );
 };
 
