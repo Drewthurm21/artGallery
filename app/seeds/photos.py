@@ -3,17 +3,16 @@ from app.models import db, Photo
 
 def seed_photos():
     photos = [
-        Photo(name='cat', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/cat.JPG?raw=true'),
-        Photo(name='owl1', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/owl1.JPG?raw=true'),
-        Photo(name='leaf', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/leaf.JPG?raw=true'),
-        # Photo(name='owl2', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/owl2.JPG?raw=true'),
-        Photo(name='pines', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/pines.JPG?raw=true'),
-        Photo(name='plant', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/plant.JPG?raw=true'),
-        Photo(name='flower', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/flower.JPG?raw=true'),
-        Photo(name='mountain', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/mountain.JPG?raw=true'),
-        Photo(name='mushroom', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/mushroom.JPG?raw=true'),
-        Photo(name='mushrooms', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/mushrooms.JPG?raw=true'),
-        Photo(name='smallbird', photo_url='https://github.com/Drewthurm21/artGallery/blob/main/images/smallbird.JPG?raw=true')
+        Photo(name='cat', photo_url='https://jessalopezart.s3.us-east-2.amazonaws.com/cat.JPG'),
+        Photo(name='owl1', photo_url='https://jessalopezart.s3.us-east-2.amazonaws.com/owl1.JPG'),
+        Photo(name='leaf', photo_url='https://jessalopezart.s3.us-east-2.amazonaws.com/leaf.JPG'),
+        Photo(name='pines', photo_url='https://jessalopezart.s3.us-east-2.amazonaws.com/pines.JPG.'),
+        Photo(name='plant', photo_url='https://jessalopezart.s3.us-east-2.amazonaws.com/plant.JPG.'),
+        Photo(name='flower', photo_url='https://jessalopezart.s3.us-east-2.amazonaws.com/flower.JPG'),
+        Photo(name='mountain', photo_url='https://jessalopezart.s3.us-east-2.amazonaws.com/mountain.JPG'),
+        Photo(name='mushroom', photo_url='https://jessalopezart.s3.us-east-2.amazonaws.com/mushroom.JPG'),
+        Photo(name='mushrooms', photo_url='https://jessalopezart.s3.us-east-2.amazonaws.com/mushrooms.JPG'),
+        Photo(name='smallbird', photo_url='https://jessalopezart.s3.us-east-2.amazonaws.com/smallbird.JPG')
     ]
 
     for photo in photos:
