@@ -1,15 +1,17 @@
 from app.models import db, User
 import os
 
+# get user information from .env file
 ADMIN_EMAIL = os.environ.get('ADMIN_EMAIL')
 ADMIN_PASS = os.environ.get('ADMIN_PASS')
+
 # Adds a demo user, you can add other users here if you want
 def seed_users():
     owner = User(
             username='OWNER', 
             email=ADMIN_EMAIL,
-            hashed_password=ADMIN_PASS
-        )
+            password=ADMIN_PASS
+    )
 
     db.session.add(owner)
 
