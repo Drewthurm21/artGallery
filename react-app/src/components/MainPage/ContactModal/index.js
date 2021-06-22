@@ -70,10 +70,10 @@ const ContactModal = () => {
                     <div className='contact-form-btn' onClick={addComment}>SEND</div>
                     <div className='contact-form-btn' onClick={resetForm}>RESET</div>
                 </div>
-                <div className='contact-social-container'>
+                {/* <div className='contact-social-container'>
                     <div className='contact-social-icon'>INST</div>
                     <div className='contact-social-icon'>TWTR</div>
-                </div>
+                </div> */}
             </form>
         </div>
     );

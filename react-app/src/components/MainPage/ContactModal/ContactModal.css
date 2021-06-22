@@ -79,7 +79,7 @@
 .contact-form-textarea {
     display: flex;
     flex-direction:column;
-    margin-top: 70px;
+    margin-top: 30px;
     height: 100%;
     font-weight: bold;
 }
@@ -90,7 +90,7 @@
 }
 
 .contact-form-textarea > textarea {
-    height: 100%;
+    height: 80%;
     width: 100%;
     outline: none;
     border: none;
@@ -104,7 +104,7 @@
 /* BUTTONS */
 .contact-form-buttons {
     display: flex;
-    margin: 40px 20px 20px 0px;
+    margin: 20px 20px 20px 0px;
 }
 
 .contact-form-buttons > div {
@@ -175,8 +175,12 @@
         border-radius: 5px;
     }
 
+    .contact-form > h2 {
+        font-size: 16px;
+    }
+
     .error-message {
-        font-size: 12px;
+        font-size: 10px;
         color: red;
     }
     .contact-form-textarea {
@@ -243,7 +247,7 @@
         display: flex;
         /* justify-content:center; */
         align-items:center;
-        margin: 20px 20px 20px 0px;
+        margin: 10px 0px 10px 0px;
     }
 
     .contact-form-buttons > div {
