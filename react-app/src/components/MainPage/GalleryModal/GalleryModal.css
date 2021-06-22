@@ -29,12 +29,21 @@
     border-radius: 5px;
 }
 
-.row1-L { border: 5px solid grey; grid-area: row1-L; height: 400px; width: 50%; background-color: var(--RUST); background-position: center center;}
+.image-container {
+    border: 5px solid grey; 
+    grid-area: row1-L; 
+    height: 400px; 
+    width: 50%; 
+    background-color: var(--RUST); 
+    background-position: center center;
+}
+
+/* .row1-L { border: 5px solid grey; grid-area: row1-L; height: 400px; width: 50%; background-color: var(--RUST); background-position: center center;}
 .row1-S { border: 5px solid grey; grid-area: row1-S; height: 400px; width: 50%; background-color: var(--LIGHT_TAN) }
 .row2-L { border: 5px solid grey; grid-area: row2-W; height: 400px; width: 50%; background-color: var(--TEAL)}
 .row2-R { border: 5px solid grey; grid-area: row2-W; height: 400px; width: 50%; background-color: var(--TEAL)}
 .row3-S { border: 5px solid grey; grid-area: row3-S; height: 400px; width: 50%; background-color: var(--FOREST_GREEN)}
-.row3-L { border: 5px solid grey; grid-area: row3-L; height: 400px; width: 50%; background-color: var(--DARK_GREEN)}
+.row3-L { border: 5px solid grey; grid-area: row3-L; height: 400px; width: 50%; background-color: var(--DARK_GREEN)} */
 
 .single-img-container {
     position: fixed;
@@ -51,4 +60,33 @@
 @keyframes fade-in {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@media screen and (max-width: 375px) {
+    .gallery-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 10vh;
+        left: 0;
+        background-color:var(--TAN_BACKGROUND);
+
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 3px solid var(--TAN_BACKGROUND);
+        border-radius: 8px;
+        overflow-y: scroll;
+        opacity: .95;
+        box-sizing: border-box;
+        animation: fade-in 300ms linear;
+    }
+
+    .image-container {
+        border: none;
+        border-bottom: 5px solid grey; 
+        height: 400px; 
+        width: 100%; 
+        background-color: var(--RUST); 
+        background-position: center center;
+    }
 }

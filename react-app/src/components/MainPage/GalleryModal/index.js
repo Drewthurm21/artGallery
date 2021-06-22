@@ -6,7 +6,7 @@ import { getPhotos, getPhoto } from '../../../store/photos'
 import './GalleryModal.css';
 
 const GalleryModal = () => {
-    const collageClasses = ['row1-L', 'row1-S', 'row2-L', 'row2-R', 'row3-S', 'row3-L'];
+    // const collageClasses = ['row1-L', 'row1-S', 'row2-L', 'row2-R', 'row3-S', 'row3-L'];
     const dispatch = useDispatch();
     const photos = useSelector(state => state.photos.photos);
 
@@ -23,8 +23,8 @@ const GalleryModal = () => {
     return (
         // EXPLORE TILE SETUP WITH UPLOADABLE PHOTO ART (SEPARATE FROM BLOGPOST)
         <div className='gallery-container'>
-            { photos && photos.map((photo, idx) => {
-                return <div onClick={(e => showPhoto(photo))} style={{ 'backgroundImage': `url(${photo.photo_url})`, 'backgroundSize': 'cover' }} className={`${collageClasses[idx % 5]}`} key={photo.id}></div>
+            { photos && photos.map((photo) => {
+                return <div onClick={() => showPhoto(photo)} style={{ 'backgroundImage': `url(${photo.photo_url})`, 'backgroundSize': 'cover' }} className={`image-container`} key={photo.id}></div>
             })}
         </div>
     );

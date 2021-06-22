@@ -44,9 +44,9 @@ const ContactModal = () => {
         <div className='contact-container'>
             <form className='contact-form'>
                 <h2 className='contact-header-underline'>Contact</h2>
-                <ul>
+                <ul className='flex-stacked'>
                     {errors.length > 0 &&
-                        errors.map(error => <li key={error} style={{ 'color': 'red' }}>{error}</li>)
+                        errors.map(error => <li key={error} className='error-message'>{error}</li>)
                     }
                 </ul>
                 <div className='contact-form-inputs-container'>
@@ -54,7 +54,7 @@ const ContactModal = () => {
                         <label>NAME</label>
                         <input value={name} onChange={e => { setName(e.target.value) }} required ></input>
                     </div>
-                    <div style={{ 'marginLeft': '20px' }} className='contact-form-input'>
+                    <div className='contact-form-input'>
                         <label>EMAIL</label>
                         <input type='email' value={email} onChange={e => setEmail(e.target.value)} required ></input>
                     </div>
@@ -67,6 +67,7 @@ const ContactModal = () => {
                     {errors.length === 0 &&
                         <div className='contact-form-btn' style={{ 'marginRight': '20px' }} onClick={addComment} required >SEND MESSAGE</div>
                     }
+                    <div className='contact-form-btn' onClick={addComment}>SEND</div>
                     <div className='contact-form-btn' onClick={resetForm}>RESET</div>
                 </div>
                 <div className='contact-social-container'>

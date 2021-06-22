@@ -33,3 +33,11 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.flex-stacked { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 0px 15px 0px;
+}

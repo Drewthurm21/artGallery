@@ -9,7 +9,7 @@ import ContactModal from './ContactModal'
 
 
 const MainPage = () => {
-    const banner = require('../../frontend-assets/logo_v2.png')
+    const banner = require('../../frontend-assets/jessa_gallery_v3.png')
     const dispatch = useDispatch();
 
     // ----- MODAL ONCLICK FUNCTIONS ----- //
