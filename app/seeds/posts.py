@@ -5,13 +5,12 @@ import datetime
 faker = Faker()
 
 def seed_posts():
-    for i in range(5):
-        post = Post(
-            title='Welcome!', 
-            body='Thank you for stopping by.',
-            photo_url=None,
-        )
-        db.session.add(post)
+    post = Post(
+        title='Welcome!', 
+        body='Thank you for stopping by.',
+        photo_url=None,
+    )
+    db.session.add(post)
     db.session.commit()
 
 
