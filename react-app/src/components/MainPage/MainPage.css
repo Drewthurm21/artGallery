@@ -74,7 +74,7 @@
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
     .main-links-container {
         position: fixed;
         width: fit-content;

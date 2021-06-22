@@ -130,7 +130,7 @@
     color: red;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
 
     .contact-container {
         position: fixed;

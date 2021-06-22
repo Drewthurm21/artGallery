@@ -62,7 +62,7 @@
     100% {opacity: 1;}
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
     .gallery-container {
         position: fixed;
         top: 0;
