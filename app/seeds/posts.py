@@ -4,6 +4,7 @@ import datetime
 
 faker = Faker()
 
+
 def seed_posts():
     post = Post(
         title='Welcome!', 
@@ -12,7 +13,6 @@ def seed_posts():
     )
     db.session.add(post)
     db.session.commit()
-
 
 
 def undo_posts():
