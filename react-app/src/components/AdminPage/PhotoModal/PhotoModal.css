@@ -41,7 +41,7 @@
 /* PREVIEW IMAGE */
 
 .preview-img-container {
-  max-width: 90vw;
+  width: 500px;
 }
 
 .preview-img {
