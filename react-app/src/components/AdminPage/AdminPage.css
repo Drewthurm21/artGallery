@@ -2,7 +2,7 @@
 /* ADMIN CONTAINERS */
 .admin-container {
     display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 100px 1fr 50px;
     grid-template-areas:
         ' . admin-header .'
@@ -16,16 +16,17 @@
     overflow-y: none;
 }
 
-.admin-header { grid-area: admin-header; width: 90vw}
+.admin-header { grid-area: admin-header; width: 85vw; margin: 0px 5px 0px 5px;}
 .admin-content { 
     grid-area: admin-content; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 90vw; 
+    width: 85vw; 
     font-size: inherit;
     overflow-y: scroll;
+    margin: 0px 5px 0px 5px;
 }
 .admin-footer { grid-area: admin-footer; width: 90vw; }
 
@@ -97,7 +98,7 @@
     .admin-container {
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
-        grid-template-rows: 40px 1fr 20px;
+        grid-template-rows: 60px 1fr 30px;
         grid-template-areas:
             ' . admin-header .'
             ' . admin-content . '

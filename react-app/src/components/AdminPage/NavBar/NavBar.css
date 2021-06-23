@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px
 }
 
 .nav-link {
@@ -27,11 +28,11 @@
 @media screen and (max-width: 450px){
 
   .nav-link {
-      margin-top: 10px;
+      margin-top: 5px;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 90px;
+      width: 75px;
       height: 30px;
 
       border: 2px solid grey;
@@ -40,7 +41,7 @@
       box-shadow: 1px 1px 15px 1px var(--GREY_TEXT);
 
       font-weight: bold;
-      font-size: 12px;
+      font-size: 10px;
       cursor: pointer;
       text-decoration: none;
   }
