@@ -117,14 +117,14 @@
   .blog-form-header-underline {
     border-bottom: 2px solid black;
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   /* PREVIEW IMAGE */
   .preview-img {
     margin-top:0px;
-    margin-bottom:10px;
-    width: 50vw;
+    margin-bottom:5px;
+    width: 30vw;
     max-width: 200px;
   }
 
