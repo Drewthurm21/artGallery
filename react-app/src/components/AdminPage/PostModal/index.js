@@ -16,6 +16,10 @@ const PostModal = () => {
         setImage(file);
     };
 
+    const closeForm = () => {
+        dispatch(hideModal())
+    }
+
     const resetForm = () => {
         setTitle('')
         setBody('')
@@ -30,14 +34,14 @@ const PostModal = () => {
     return (
         <div className='blog-form-container'>
             <form className='blog-form-form'>
-                <h2 className='blog-form-header-underline'>blog</h2>
+                <h2 className='blog-form-header-underline'>Blog</h2>
                 <div className='blog-form-form-inputs-container'>
                     <div className='blog-form-form-input'>
                         <label>TITLE</label>
                         <input value={title} onChange={e => { setTitle(e.target.value) }} required ></input>
                     </div>
-                    <div style={{ 'marginLeft': '20px' }} className='blog-form-form-input'>
-                        <label>PHOTO</label>
+                    <div className='blog-form-form-input'>
+                        <label>PHOTO SELECT</label>
                         <input className='upload-image-btn' type='file' accept='image/*' onChange={updateImage} ></input>
                     </div>
                 </div>
@@ -46,10 +50,9 @@ const PostModal = () => {
                     <textarea value={body} onChange={e => setBody(e.target.value)}></textarea>
                 </div>
                 <div className='blog-form-form-buttons'>
-                    <div className='blog-form-form-btn' style={{ 'marginRight': '20px' }} onClick={makePost} required >CREATE BLOGPOST</div>
-                </div>
-                <div className='blog-form-social-container'>
+                    <div className='blog-form-form-btn' onClick={makePost} required >POST</div>
                     <div className='blog-form-form-btn' onClick={resetForm}>RESET</div>
+                    <div className='blog-form-form-btn' onClick={closeForm}>CANCEL</div>
                 </div>
             </form>
         </div>

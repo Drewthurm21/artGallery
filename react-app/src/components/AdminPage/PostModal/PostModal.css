@@ -13,7 +13,6 @@
     border-radius: 10px;
     overflow-y: scroll;
     opacity: .95;
-    box-sizing: border-box;
 }
 
 .blog-form-container::-webkit-scrollbar {
@@ -67,7 +66,7 @@
     flex-direction:column;
     margin-top: 20px;
     font-weight: bold;
-    height: 90%;
+    height: 400px;
 }
 
 .blog-form-form-textarea > textarea {
@@ -84,7 +83,7 @@
     margin: 40px 20px 20px 0px;
 }
 
-.blog-form-form-buttons > div {
+.blog-form-form-btn {
     display: flex;
     padding: 10px 20px 10px 20px;
     font-weight: bold;
@@ -94,21 +93,78 @@
     background-color: white;
     transition: background-color 300ms, color 300ms;
     cursor: pointer;
+    margin-right: 10px;
 }
 
-.blog-form-form-buttons > div:hover {
+.blog-form-form-btn:hover {
     color: white;
     background-color: var(--TEAL);
 }
 
+@media screen and (max-width: 450px) {
 
-/* SOCIAL MEDIA LINKS */
-.blog-form-social-container {
-    display: flex;
-    flex-direction: row; 
-    justify-content: flex-end;   
-}
+    /* INPUTS */
+    .blog-form-form-inputs-container{
+        display: flex;
+        flex-direction: column;
+    }
 
-.blog-form-social-icon {
-    margin: 15px 15px 0px 0px;
+    .blog-form-form-input{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 60px;
+        font-weight: bold;
+    }
+
+    .blog-form-form-input > input {
+        width: 270px;
+        height: 30px;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+    }
+
+
+    /* TEXTAREA */
+    .blog-form-form-textarea {
+        display: flex;
+        flex-direction:column;
+        margin-top: 20px;
+        font-weight: bold;
+        height: 400px;
+    }
+
+    .blog-form-form-textarea > textarea {
+        height: 200px;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        margin-top: 5px;
+    }
+
+    /* BUTTONS */
+    .blog-form-form-buttons {
+        display: flex;
+    }
+
+    .blog-form-form-btn {
+        display: flex;
+        padding: 10px 20px 10px 20px;
+        font-weight: bold;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        background-color: white;
+        transition: background-color 300ms, color 300ms;
+        cursor: pointer;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    .blog-form-form-btn:hover {
+        color: white;
+        background-color: var(--TEAL);
+    }
+
 }
