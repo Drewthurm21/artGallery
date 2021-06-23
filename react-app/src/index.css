@@ -41,3 +41,7 @@ body {
     align-items: flex-start;
     margin: 0 0px 15px 0px;
 }
+
+.bold {
+    font-weight: bold;
+}

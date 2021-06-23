@@ -35,6 +35,7 @@ const LoginForm = () => {
     <div className='login-form-container'>
       {/* <div></div> */}
       <form className='login-form' onSubmit={onLogin}>
+      <h2> Welcome, Jessa!</h2>
         <div className='form-errors'>
           {errors.map((error) => (
             <div className='login-error-message'>{error}</div>
@@ -46,7 +47,7 @@ const LoginForm = () => {
             className='login-input'
             name="email"
             type="text"
-            placeholder="Email"
+            placeholder=""
             value={email}
             onChange={updateEmail}
           />
@@ -56,7 +57,7 @@ const LoginForm = () => {
             className='login-input'
             name="password"
             type="password"
-            placeholder="Password"
+            placeholder=""
             value={password}
             onChange={updatePassword}
           />

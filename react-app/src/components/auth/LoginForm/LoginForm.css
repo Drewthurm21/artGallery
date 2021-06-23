@@ -1,40 +1,27 @@
 
 /* LOGIN CONTAINERS  */
 .login-form-container {
-    display: grid;
-    grid-template-columns: 35px 1fr 35px;
-    grid-template-rows: 90px 1fr 90px;
-    grid-template-areas:
-        ' . . . '
-        ' . login-form . '
-        ' . . . ';
+    display: flex;
+    justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-color: var(--CHARCOAL)
-}
-
-@media screen and (max-width: 850px) {
-  .login-form-container {
-    transform: scale(1.25)
-  }
-}
-
-
-.login-form-container::-webkit-scrollbar {
-    display: none;
+    background-color: var(--CHARCOAL);
+    font-size: 20px;
 }
 
 /* LOGIN FORM  */
 .login-form {
-    grid-area: login-form;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--TAN_BACKGROUND);
-    padding: 70px;
+    padding: 30px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     color: var(--CHARCOAL);
     border-radius: 5px;
+    width: 70vw;
 }
 
 .form-errors {
@@ -42,49 +29,50 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0px 20px 0px;
+    padding: 10px 0px 10px 0px;
     color: var(--RUST);
-    font-size: 35px
+    font-size: inherit;
 }
+
+.login-error-message {
+    margin-bottom: 10px;
+}
+
+
+/* INPUTS */
 
 .form-inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 35px
+    align-items: flex-start;
+    height: 40vh;
+    width: 70%;
+    font-size: inherit;
 }
-
-/* INPUTS */
 
 .login-input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 70px;
+    height: 40px;
     padding-left: 20px;
-    width: 600px;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    font-weight: bold;
-    font-size: 35px
+    width: 100%;
+    margin-bottom: 80px;
+    margin-top: 20px;
+    font-size: inherit;
 }
 
 .login-label {
     font-weight: bold;
 }
 
-.login-error-message {
-    margin-bottom: 30px;
-}
-
 
 /* BUTTONS */
 .login-button {
     display: flex;
-    margin: 20px 0px 20px 0px;
-    width: 80%;
+    margin: 0px 0px 20px 0px;
+    width: 70%;
     padding: 10px 0px 10px 20px;
     border: 2px solid grey;
     background-color: white;
@@ -93,9 +81,102 @@
     cursor: pointer;
     justify-content:center;
     font-weight: bold;
-    font-size: 35px;
+    font-size: inherit;
 }
 
+@media screen and (max-width: 450px) {
+
+    /* LOGIN CONTAINERS  */
+    .login-form-container {
+        display: flex;
+        justify-content: center;
+        align-items: space-between;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--CHARCOAL);
+        font-size: 14px;
+    }
+
+    /* LOGIN FORM  */
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        align-items: center;
+        background-color: var(--TAN_BACKGROUND);
+        padding: 10px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        color: var(--CHARCOAL);
+        border-radius: 5px;
+        width: 80vw;
+    }
+
+    .form-errors {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0px 10px 0px;
+        color: var(--RUST);
+        font-size: inherit;
+        height: fit-content;
+    }
+
+    .login-error-message {
+        margin-bottom: 10px;
+    }
+
+
+    /* INPUTS */
+
+    .form-inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 40vh;
+        width: 70%;
+        font-size: inherit;
+    }
+
+    .login-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40px;
+        padding-left: 20px;
+        width: 100%;
+        margin-bottom: 80px;
+        margin-top: 20px;
+        font-size: inherit;
+    }
+
+    .login-label {
+        font-weight: bold;
+    }
+
+
+    /* BUTTONS */
+    .login-button {
+        display: flex;
+        margin: 0px 0px 20px 0px;
+        width: 70%;
+        padding: 10px 0px 10px 20px;
+        border: 2px solid grey;
+        background-color: white;
+        border-radius: 3px;
+        color: var(--CHARCOAL);
+        cursor: pointer;
+        justify-content:center;
+        font-weight: bold;
+        font-size: inherit;
+    }
+
+}
+
+
+/* 
 @media screen and (max-width=)
 
 .login-button {
@@ -111,7 +192,7 @@
     justify-content:center;
     font-weight: bold;
     font-size: 35px;
-}
+} */
 
 /* .login-form-form-buttons > div {
     display: flex;
