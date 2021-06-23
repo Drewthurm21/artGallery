@@ -19,7 +19,7 @@ const AdminPage = () => {
                 <NavBar />
             </div>
             <div className='admin-content'>
-                <div className='comment-container'>
+                <div className='comments-container'>
                     {comments && comments.map(comment => (
                         <div className='comment-post-container'>
                             <div className='comment-post-header'>
