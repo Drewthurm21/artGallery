@@ -33,7 +33,6 @@ const LoginForm = () => {
 
   return (
     <div className='login-form-container'>
-      {/* <div></div> */}
       <form className='login-form' onSubmit={onLogin}>
       <h2> Welcome, Jessa!</h2>
         <div className='form-errors'>
