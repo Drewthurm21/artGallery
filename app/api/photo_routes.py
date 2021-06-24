@@ -2,6 +2,7 @@ from flask import Blueprint, request
 from flask_login import login_required
 from app.models import db, Photo
 from app.aws import get_unique_filename, upload_file_to_s3
+from sqlalchemy import desc
 
 photo_routes = Blueprint('photos', __name__)
 
@@ -11,7 +12,7 @@ def get_photos():
     '''
     return all photos
     '''
-    query = Photo.query.all()
+    query = Photo.query.order_by(desc(Photo.id)).all()
     return {'photos': [photo.to_dict() for photo in query]}
 
 
