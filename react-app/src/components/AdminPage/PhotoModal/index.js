@@ -24,15 +24,15 @@ const PhotoModal = () => {
   }
 
   const postPhoto = () => {
-
     dispatch(uploadPhoto(title, image))
+    closeForm()
   }
 
   return (
     <div className='blog-form-container'>
       <form className='blog-form-form'>
         <h2 className='blog-form-header-underline'>Upload New Image</h2>
-  
+
         <div className='blog-form-form-inputs-container'>
           <div className='blog-form-form-input'>
             <label>TITLE</label>
@@ -54,9 +54,9 @@ const PhotoModal = () => {
             <div className='blog-form-form-btn' style={{ 'marginRight': '20px' }} onClick={postPhoto} required >UPLOAD PHOTO</div>
           </div>}
 
-        
+
         <div className='blog-form-form-btn' onClick={closeForm}>CANCEL</div>
-        
+
       </form>
     </div >
   );
