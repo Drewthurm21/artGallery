@@ -37,9 +37,6 @@ function App() {
         <Route path="/opensesame" exact={true}>
           <LoginForm />
         </Route>
-        <Route path="/testcomp" exact={true}>
-          <ParallaxHomepage />
-        </Route>
         <ProtectedRoute path="/imtheboss" exact={true}>
           <AdminPage />
         </ProtectedRoute>
