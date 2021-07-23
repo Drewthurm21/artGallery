@@ -14,6 +14,10 @@ const PostModal = () => {
     const updateImage = (e) => {
         const file = e.target.files[0];
         setImage(file);
+        if (file) {
+            let imgPreview = document.getElementById('imgPreview')
+            imgPreview.src = URL.createObjectURL(file)
+        }
     };
 
     const closeForm = () => {
@@ -44,6 +48,10 @@ const PostModal = () => {
                         <label>PHOTO SELECT</label>
                         <input className='upload-image-btn' type='file' accept='image/*' onChange={updateImage} ></input>
                     </div>
+                </div>
+                <div className='preview-img-container'>
+                    <h4>PREVIEW</h4>
+                    <img className='preview-img' id='imgPreview' src='#' alt='image upload preview'></img>
                 </div>
                 <div className='blog-form-form-textarea'>
                     <label>MESSAGE</label>

@@ -8,10 +8,25 @@ import NavBar from './NavBar'
 const AdminPage = () => {
     const dispatch = useDispatch();
     const comments = useSelector(state => state.comments.comments);
+    let commentsSection;
 
     useEffect(() => {
         dispatch(getComments())
     }, [dispatch])
+
+    if (comments) {
+        commentsSection = comments.map(comment => (
+            <div className='comment-post-container'>
+                <div className='comment-post-header'>
+                    <p>From: {comment.name}</p>
+                    <p>Email: {comment.email}</p>
+                </div>
+                <div className='comment-post-content'>
+                    <p>{comment.content}</p>
+                </div>
+            </div>
+        ))
+    }
 
     return (
         <div className='admin-container'>
@@ -20,17 +35,7 @@ const AdminPage = () => {
             </div>
             <div className='admin-content'>
                 <div className='comments-container'>
-                    {comments && comments.map(comment => (
-                        <div className='comment-post-container'>
-                            <div className='comment-post-header'>
-                                <p>From: {comment.name}</p>
-                                <p>Email: {comment.email}</p>
-                            </div>
-                            <div className='comment-post-content'>
-                                <p>{comment.content}</p>
-                            </div>
-                        </div>
-                    ))}
+                    {commentsSection}
                 </div>
             </div>
             <div className="admin-footer">
